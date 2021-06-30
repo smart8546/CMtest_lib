@@ -14,6 +14,9 @@ The Project fun is:
    [Reflection.Assembly]::LoadFile($PSLib) 
     
     Example1:
+      $CurrentLocation = Get-Location
+      $PSLib = "$CurrentLocation\Cmtest_lib.dll"
+      [Reflection.Assembly]::LoadFile($PSLib)       
       [Cmtest_lib.Methods]::Sum(10,2)
     Example2:
       [Cmtest_lib.Methods]::IsNumber("8526")
