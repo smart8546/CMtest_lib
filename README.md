@@ -6,12 +6,6 @@ Powershell7.1.3 install step in Powersehll_install files.
 The Project fun is:
   1.SUM : input int1 plus int2 out Sum_int.
   2.IsNumber : Input String , Input Split char[] , Out Split String.
- 
- Example:
-  PowerShell call Dll Step:
-   $CurrentLocation = Get-Location
-   $PSLib = "$CurrentLocation\Cmtest_lib.dll"
-   [Reflection.Assembly]::LoadFile($PSLib) 
     
     Example1:
       $CurrentLocation = Get-Location
@@ -19,4 +13,7 @@ The Project fun is:
       [Reflection.Assembly]::LoadFile($PSLib)       
       [Cmtest_lib.Methods]::Sum(10,2)
     Example2:
+      $CurrentLocation = Get-Location
+      $PSLib = "$CurrentLocation\Cmtest_lib.dll"
+      [Reflection.Assembly]::LoadFile($PSLib) 
       [Cmtest_lib.Methods]::IsNumber("8526")
