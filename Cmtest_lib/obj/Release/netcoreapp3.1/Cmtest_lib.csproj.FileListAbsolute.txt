@@ -1,0 +1,9 @@
+E:\C#\DLL\Cmtest_lib\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.deps.json
+E:\C#\DLL\Cmtest_lib\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.AssemblyReference.cache
+E:\C#\DLL\Cmtest_lib\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfoInputs.cache
+E:\C#\DLL\Cmtest_lib\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfo.cs
+E:\C#\DLL\Cmtest_lib\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.CoreCompileInputs.cache
+E:\C#\DLL\Cmtest_lib\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.pdb
