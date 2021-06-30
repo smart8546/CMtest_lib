@@ -3,9 +3,11 @@ The Project using Powershell7.1 calling C# dll on Cmtest for factory test.
 The project using  C# Net core 3.1 to build.
 Powershell7.1.3 install step in Powersehll_install files.
 
-The Project fun is:
-    1.SUM : input int1 plus int2 out Sum_int.
-    2.IsNumber : Input String , Input Split char[] , Out Split String.
+The Project fun is: 
+    Fun1.SUM : 
+    	input int1 plus int2 out Sum_int.
+    Fun2.IsNumber : 
+    	Input String , Input Split char[] , Out Split String.
     
     Example1:
       $CurrentLocation = Get-Location
