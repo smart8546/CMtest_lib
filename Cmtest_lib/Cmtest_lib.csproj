@@ -8,4 +8,8 @@
     <DefineConstants />
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Methods.cs~RF1915881.TMP" />
+  </ItemGroup>
+
 </Project>

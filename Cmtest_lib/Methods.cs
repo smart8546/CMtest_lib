@@ -1,13 +1,20 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-using System.Text.RegularExpressions;
+using System.IO.Ports;
+using System.Threading;
+using Microsoft.VisualBasic;
+
 
 namespace Cmtest_lib
 {
     public static class Methods
     {
+
+        public static void Test() 
+        {
+            
+        }
 
         public static int Sum(int a, int b)
         {
@@ -58,6 +65,24 @@ namespace Cmtest_lib
 
          //   return out_str;
         }
+        public static void Split_str_Ind(string input, char[] split_char,int count)
+        {
+           // String out_str = "";
+            try
+            {
+                string[] Str_split = input.Split(split_char, StringSplitOptions.RemoveEmptyEntries);
+                Console.WriteLine(Str_split[count]);
+               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+
+
+            //   return out_str;
+        }
+
 
     }
 }
