@@ -2,22 +2,22 @@
 The Project using Powershell7.1 calling C# dll on Cmtest for factory test.
 The project using  C# Net core 3.1 to build.
 Powershell7.1.3 install step in Powersehll_install files.
-##FUN Note 
+
 The Project fun is: 
-	Fun1
+	Fun1: 
 		SUM:
 			input int1 plus int2 out Sum_int.
-	Fun2
+	Fun2:
 		IsNumber: 
 			Input String , Input Split char[] , Out Split String.
-	Fun3
+	Fun3:
 		Split_str_Ind
 			Input String , Input Split char[] ,int count, Out Split count String.
-	Fun4
+	Fun4:
 		Split_string
 			Input String , Input Split char[] ,Out Split String.
 			
-##Exapmle note
+
     Example1:
       $CurrentLocation = Get-Location
       $PSLib = "$CurrentLocation\Cmtest_lib.dll"
