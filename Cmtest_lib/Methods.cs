@@ -10,10 +10,37 @@ namespace Cmtest_lib
 {
     public static class Methods
     {
-
+        #region UART Setting
+        public static String UART_baud = "115200"; //鮑率
+        public static string UART_Comport = "COM1"; //端口
+        public static string UART_Databite = "8"; //資料位元
+        public static string UART_stopbit=  "1"; //停止位元
+        public static string UART_Parity = "Null"; //同為檢查
+        public static string UART_flow_control = "Null"; //流量控制
+        #endregion
         public static void Test() 
         {
             
+        }
+        public static void UART_list() 
+        {
+            try
+            {
+                string[] names = SerialPort.GetPortNames();
+                for (int k = 0; k < names.Count(); k++)
+                {
+                    Console.WriteLine(names[k]);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            
+            }
+
+            
+            
+
         }
 
         public static int Sum(int a, int b)

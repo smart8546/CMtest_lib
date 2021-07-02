@@ -14,6 +14,8 @@ The Project fun is:
 	Fun4 Split_string:  
 		Input String , Input Split char[] ,Out Split String.  
 			
+	Fun5 UART_list:  
+		Print COM PORT list
 
     Example1:
       $CurrentLocation = Get-Location
@@ -35,3 +37,9 @@ The Project fun is:
       $PSLib = "$CurrentLocation\Cmtest_lib.dll"
       [Reflection.Assembly]::LoadFile($PSLib) 
       [Cmtest_lib.Methods]::Split_string("PCT8210-D97(RoHS)",'-,(,)')
+	Example5:
+      $CurrentLocation = Get-Location
+      $PSLib = "$CurrentLocation\Cmtest_lib.dll"
+      [Reflection.Assembly]::LoadFile($PSLib) 
+      [Cmtest_lib.Methods]::UART_list()
+

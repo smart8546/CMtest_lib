@@ -12,4 +12,8 @@
     <None Remove="Methods.cs~RF1915881.TMP" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.IO.Ports" Version="5.0.1" />
+  </ItemGroup>
+
 </Project>
