@@ -15,7 +15,9 @@ The Project fun is:
 		Input String , Input Split char[] ,Out Split String.  
 			
 	Fun5 UART_list:  
-		Print COM PORT list
+		Print COM PORT list  
+	FUN6 Connect:
+		Input Connect device name
 
     Example1:
       $CurrentLocation = Get-Location
@@ -42,4 +44,8 @@ The Project fun is:
       $PSLib = "$CurrentLocation\Cmtest_lib.dll"
       [Reflection.Assembly]::LoadFile($PSLib) 
       [Cmtest_lib.Methods]::UART_list()
-
+	Example6:
+      $CurrentLocation = Get-Location
+      $PSLib = "$CurrentLocation\Cmtest_lib.dll"
+      [Reflection.Assembly]::LoadFile($PSLib) 
+      [Cmtest_lib.Methods]::Connect("COM6")

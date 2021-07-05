@@ -14,13 +14,53 @@ namespace Cmtest_lib
         public static String UART_baud = "115200"; //鮑率
         public static string UART_Comport = "COM1"; //端口
         public static string UART_Databite = "8"; //資料位元
-        public static string UART_stopbit=  "1"; //停止位元
-        public static string UART_Parity = "Null"; //同為檢查
-        public static string UART_flow_control = "Null"; //流量控制
+        public static string UART_stopbit=  "One"; //停止位元
+        public static string UART_Parity = "None"; //同為檢查
+        public static string UART_flow_control = "None"; //流量控制
+        public static SerialPort serialPort = new SerialPort();
+
         #endregion
         public static void Test() 
         {
             
+        }
+        public static void Connect(string Device_name)
+        {
+            try 
+            {
+                int Check = Device_name.IndexOf("COM");
+                if (Check == 0) 
+                {
+                    Console.WriteLine("connect");
+                    //Com port name
+                    serialPort.PortName = Device_name;
+                    //Setting BaudRate
+                    int BaudRate = Convert.ToInt32(UART_baud);
+                    serialPort.BaudRate = BaudRate;
+                    //Setting Databite
+                    int DataRate = Convert.ToInt32(UART_Databite);
+                    serialPort.DataBits = DataRate;
+                    //Setting Parity
+                    serialPort.Parity = (Parity)Enum.Parse(typeof(Parity), UART_Parity);
+                    //Setting Stop bit
+                    serialPort.StopBits = (StopBits)Enum.Parse(typeof(StopBits), UART_stopbit);
+                    //Setting Flow control
+                    serialPort.Handshake = (Handshake)Enum.Parse(typeof(Handshake), UART_flow_control);
+                    // 讀取作業未完成時，發生逾時之前的毫秒數。
+                    serialPort.ReadTimeout = 500;
+                    //發生逾時之前的毫秒數。
+                    serialPort.WriteTimeout = 500;
+                    serialPort.Open();
+
+
+                }
+            }
+            catch (Exception ex) 
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            
+
         }
         public static void UART_list() 
         {
