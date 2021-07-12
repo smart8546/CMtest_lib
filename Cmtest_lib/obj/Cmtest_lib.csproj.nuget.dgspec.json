@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\C#\\DLL\\Cmtest_lib_0705\\Cmtest_lib\\Cmtest_lib.csproj": {}
+    "E:\\C#\\DLL\\Cmtest_lib_0709\\Cmtest_lib\\Cmtest_lib.csproj": {}
   },
   "projects": {
-    "E:\\C#\\DLL\\Cmtest_lib_0705\\Cmtest_lib\\Cmtest_lib.csproj": {
+    "E:\\C#\\DLL\\Cmtest_lib_0709\\Cmtest_lib\\Cmtest_lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\C#\\DLL\\Cmtest_lib_0705\\Cmtest_lib\\Cmtest_lib.csproj",
+        "projectUniqueName": "E:\\C#\\DLL\\Cmtest_lib_0709\\Cmtest_lib\\Cmtest_lib.csproj",
         "projectName": "Cmtest_lib",
-        "projectPath": "E:\\C#\\DLL\\Cmtest_lib_0705\\Cmtest_lib\\Cmtest_lib.csproj",
+        "projectPath": "E:\\C#\\DLL\\Cmtest_lib_0709\\Cmtest_lib\\Cmtest_lib.csproj",
         "packagesPath": "C:\\Users\\smart\\.nuget\\packages\\",
-        "outputPath": "E:\\C#\\DLL\\Cmtest_lib_0705\\Cmtest_lib\\obj\\",
+        "outputPath": "E:\\C#\\DLL\\Cmtest_lib_0709\\Cmtest_lib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

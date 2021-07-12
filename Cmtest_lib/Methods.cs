@@ -24,12 +24,23 @@ namespace Cmtest_lib
         {
             
         }
+        #region Device 
+
+        public static void Disconnect(string Device_name) 
+        {
+            if (serialPort.IsOpen)
+            {
+                Console.WriteLine("Dis");
+                serialPort.Close();               
+            }
+        
+        }
         public static void Connect(string Device_name)
         {
             try 
             {
                 int Check = Device_name.IndexOf("COM");
-                if (Check == 0) 
+                if (Check == 0 && !serialPort.IsOpen) 
                 {
                     Console.WriteLine("connect");
                     //Com port name
@@ -51,6 +62,7 @@ namespace Cmtest_lib
                     //發生逾時之前的毫秒數。
                     serialPort.WriteTimeout = 500;
                     serialPort.Open();
+                    serialPort.DataReceived += serialPort_DataReceived;
 
 
                 }
@@ -82,12 +94,80 @@ namespace Cmtest_lib
             
 
         }
+        private static void serialPort_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            string receive = "";//数据接收
 
+
+            if (serialPort.IsOpen)
+            {
+                Console.WriteLine("test1");
+                try
+                {
+                    for (int j = 0; j < j + 2; j++)
+                    {
+                        Thread.Sleep(50);  //（毫秒）等待一定时间，确保数据的完整性 int len        
+                        int len = serialPort.BytesToRead;
+                        if (len != 0)
+                        {
+                            byte[] buff = new byte[len];
+                            serialPort.Read(buff, 0, len);
+                            receive = Encoding.Default.GetString(buff);//数据接收内容
+                            Console.WriteLine(receive);
+
+                            ///RX_TXT.Refresh();
+                        }
+
+                    }
+
+                }
+                catch
+                {
+                    // ToolData.WriteLog(lrtxtLog, "接收数据出错", 1);
+                    return;
+                }
+
+            }
+            else
+            {
+                return;
+            }
+
+
+        }
+        public static void Send(String Device_name, String Command) 
+        {
+            int Check = Device_name.IndexOf("COM");
+            if (Check == 0 && serialPort.IsOpen) 
+            {
+              
+                bool Check1 = Command.Contains("\r\n");
+                if (Check1)
+                {
+                    string[] Sub = Command.Split(new string[] { "\r\n" }, StringSplitOptions.None);
+                    int Max_count = Sub.Count();
+                    int count = 0;
+                    while(count < Max_count) 
+                    {
+                        if (Sub[count] == null)
+                        {
+                            break;
+                        }
+                        string cmd = Sub[count];
+                        Console.WriteLine(cmd);
+                        serialPort.WriteLine(cmd + '\r' + '\n');
+                        count++;
+                    }
+                }
+            }
+        
+        }
+        #endregion
         public static int Sum(int a, int b)
         {
             return a + b;
         }
-        public static int Product(int a, int b)
+         public static int Product(int a, int b)
         {
             return a * b;
         }

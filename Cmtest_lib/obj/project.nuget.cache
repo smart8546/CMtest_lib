@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9BsXtftirxcOFKv9uPqLJPtBQ/9tnXdFn+S88cGsOPIzyh0xfKbf9OnDSHQ+4IEeIEt2bCg1TVLG8874unBrbQ==",
+  "dgSpecHash": "bBksjLNlcwVz70taQrCSN5upRJEJvpV37YQfDvbSDlElb0FKuWfVp6ENQrG276xP2G2bab9WmtcgmKtbL6iKNA==",
   "success": true,
-  "projectFilePath": "E:\\C#\\DLL\\Cmtest_lib_0705\\Cmtest_lib\\Cmtest_lib.csproj",
+  "projectFilePath": "E:\\C#\\DLL\\Cmtest_lib_0709\\Cmtest_lib\\Cmtest_lib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smart\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
