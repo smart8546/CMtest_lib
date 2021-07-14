@@ -4,12 +4,16 @@ using System.Linq;
 using System.IO.Ports;
 using System.Threading;
 using Microsoft.VisualBasic;
-
+using System.ComponentModel;
+using System.Text.RegularExpressions;
 
 namespace Cmtest_lib
 {
     public static class Methods
     {
+        #region 宣告
+        public  static BackgroundWorker bgwWorker = new BackgroundWorker();
+        #endregion
         #region UART Setting
         public static String UART_baud = "115200"; //鮑率
         public static string UART_Comport = "COM1"; //端口
@@ -18,19 +22,78 @@ namespace Cmtest_lib
         public static string UART_Parity = "None"; //同為檢查
         public static string UART_flow_control = "None"; //流量控制
         public static SerialPort serialPort = new SerialPort();
-
+        public static Thread Serial_thread;
         #endregion
         public static void Test() 
         {
+            string str = "aaaa";
+            double aaaa = Convert.ToDouble(str);
+            if (aaaa%1 == 0)
+            {
+                Console.WriteLine("{0}整數 ",str);
             
+            }
+            else 
+            {
+                Console.WriteLine("{0}小數",str);
+            }
+            //bool isNumeric = Regex.IsMatch(str, @"^([+-]?)/d*[.]?/d*$");
+            //Console.WriteLine(isNumeric);
         }
         #region Device 
+        #region Backupgroud
+        private static void bgwWorker_DoWork(object sender, DoWorkEventArgs e)
+        {
+            string receive = "";//数据接收
 
+
+            if (serialPort.IsOpen)
+            {
+                Console.WriteLine("test1");
+                try
+                {
+                    for (int j = 0; j < j + 2; j++)
+                    {
+                        Thread.Sleep(50);  //（毫秒）等待一定时间，确保数据的完整性 int len        
+                        int len = serialPort.BytesToRead;
+                        Console.WriteLine(len.ToString());
+                        if (len != 0)
+                        {
+                            byte[] buff = new byte[len];
+                            serialPort.Read(buff, 0, len);
+                            receive = Encoding.Default.GetString(buff);//数据接收内容
+                            Console.WriteLine(receive);
+
+                            ///RX_TXT.Refresh();
+                        }
+
+                    }
+
+                }
+                catch
+                {
+                    // ToolData.WriteLog(lrtxtLog, "接收数据出错", 1);
+                    return;
+                }
+
+            }
+            else
+            {
+                return;
+            }
+        }
+        public static void bgwWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+
+        }
+        #endregion
         public static void Disconnect(string Device_name) 
         {
             if (serialPort.IsOpen)
             {
+
                 Console.WriteLine("Dis");
+             //   Serial_thread.Abort();
                 serialPort.Close();               
             }
         
@@ -62,7 +125,9 @@ namespace Cmtest_lib
                     //發生逾時之前的毫秒數。
                     serialPort.WriteTimeout = 500;
                     serialPort.Open();
-                    serialPort.DataReceived += serialPort_DataReceived;
+                     serialPort.DataReceived += serialPort_DataReceived;
+                  //  Serial_thread = new Thread(SerialPort_Received);
+                  //  Serial_thread.Start();
 
 
                 }
@@ -108,6 +173,7 @@ namespace Cmtest_lib
                     {
                         Thread.Sleep(50);  //（毫秒）等待一定时间，确保数据的完整性 int len        
                         int len = serialPort.BytesToRead;
+                        Console.WriteLine(len.ToString());
                         if (len != 0)
                         {
                             byte[] buff = new byte[len];
@@ -142,6 +208,7 @@ namespace Cmtest_lib
             {
               
                 bool Check1 = Command.Contains("\r\n");
+                Console.WriteLine(Command);
                 if (Check1)
                 {
                     string[] Sub = Command.Split(new string[] { "\r\n" }, StringSplitOptions.None);
@@ -182,6 +249,28 @@ namespace Cmtest_lib
             {
                 if (c < 48 || c > 57)                          //判斷是否為數字
                 {
+                    ////判斷是否是數值，有小數點
+                    bool isNumeric = str.Contains(".");
+                    if (isNumeric) 
+                    {
+                        try 
+                        {
+                            double aaaa = Convert.ToDouble(str);
+
+                            if (aaaa % 1 != 0)
+                            {
+                               // Console.WriteLine("isNumeric");
+                                return true;
+
+                            }
+                        }
+                        catch(Exception ex)
+                        {
+                            Console.WriteLine("不是數字");
+                        }
+                       
+                    }
+                    else
                     return false;                              //不是，就返回False
                 }
             }

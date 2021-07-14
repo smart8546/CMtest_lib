@@ -1,19 +1,30 @@
 {
   "version": 2,
-  "dgSpecHash": "bBksjLNlcwVz70taQrCSN5upRJEJvpV37YQfDvbSDlElb0FKuWfVp6ENQrG276xP2G2bab9WmtcgmKtbL6iKNA==",
+  "dgSpecHash": "ZXAhJMsJh0Epxo7dYZY6w4fPsgAHbOCdYk/MOt3O1L+viDHALq1ZpW3hP3Th0QB2eapIYdSVuUepXx5NZLwwcg==",
   "success": true,
-  "projectFilePath": "E:\\C#\\DLL\\Cmtest_lib_0709\\Cmtest_lib\\Cmtest_lib.csproj",
+  "projectFilePath": "E:\\C#\\DLL\\Cmtest_lib_0713\\Cmtest_lib\\Cmtest_lib.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\smart\\.nuget\\packages\\hangfire\\1.7.24\\hangfire.1.7.24.nupkg.sha512",
+    "C:\\Users\\smart\\.nuget\\packages\\hangfire.aspnetcore\\1.7.24\\hangfire.aspnetcore.1.7.24.nupkg.sha512",
+    "C:\\Users\\smart\\.nuget\\packages\\hangfire.core\\1.7.24\\hangfire.core.1.7.24.nupkg.sha512",
+    "C:\\Users\\smart\\.nuget\\packages\\hangfire.sqlserver\\1.7.24\\hangfire.sqlserver.1.7.24.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\smart\\.nuget\\packages\\newtonsoft.json\\11.0.1\\newtonsoft.json.11.0.1.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\runtime.linux-arm.runtime.native.system.io.ports\\5.0.0\\runtime.linux-arm.runtime.native.system.io.ports.5.0.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\runtime.linux-arm64.runtime.native.system.io.ports\\5.0.0\\runtime.linux-arm64.runtime.native.system.io.ports.5.0.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\runtime.linux-x64.runtime.native.system.io.ports\\5.0.0\\runtime.linux-x64.runtime.native.system.io.ports.5.0.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\runtime.native.system.io.ports\\5.0.1\\runtime.native.system.io.ports.5.0.1.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\runtime.osx-x64.runtime.native.system.io.ports\\5.0.0\\runtime.osx-x64.runtime.native.system.io.ports.5.0.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-arm64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-x64.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x64.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
+    "C:\\Users\\smart\\.nuget\\packages\\system.data.sqlclient\\4.4.0\\system.data.sqlclient.4.4.0.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\system.io.ports\\5.0.1\\system.io.ports.5.0.1.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
-    "C:\\Users\\smart\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512"
+    "C:\\Users\\smart\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\smart\\.nuget\\packages\\system.text.encoding.codepages\\4.4.0\\system.text.encoding.codepages.4.4.0.nupkg.sha512"
   ],
   "logs": []
 }
