@@ -251,6 +251,8 @@ namespace Cmtest_lib
                 {
                     ////判斷是否是數值，有小數點
                     bool isNumeric = str.Contains(".");
+                    ///判斷是否數值小於0
+                    bool isless0 = str.Contains("-");
                     if (isNumeric) 
                     {
                         try 
@@ -263,12 +265,33 @@ namespace Cmtest_lib
                                 return true;
 
                             }
+                            ///數值小於0
+                            if(aaaa < 0) 
+                            {
+                                return true;
+                            }
                         }
                         catch(Exception ex)
                         {
                             Console.WriteLine("不是數字");
                         }
                        
+                    }
+                    if (isless0)
+                    {
+                        try
+                        {
+                            Double number = Convert.ToDouble(str);
+                            if(number < 0)
+                            {
+                                return true;
+                            }
+
+                        }
+                        catch (Exception ex)
+                        {
+                            return false;
+                        }
                     }
                     else
                     return false;                              //不是，就返回False
