@@ -76,3 +76,45 @@ E:\C#\DLL\Cmtest_lib_0714\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.Assemb
 E:\C#\DLL\Cmtest_lib_0714\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.CoreCompileInputs.cache
 E:\C#\DLL\Cmtest_lib_0714\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.dll
 E:\C#\DLL\Cmtest_lib_0714\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0715\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.deps.json
+E:\C#\DLL\Cmtest_lib_0715\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0715\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0715\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.AssemblyReference.cache
+E:\C#\DLL\Cmtest_lib_0715\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfoInputs.cache
+E:\C#\DLL\Cmtest_lib_0715\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfo.cs
+E:\C#\DLL\Cmtest_lib_0715\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.CoreCompileInputs.cache
+E:\C#\DLL\Cmtest_lib_0715\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0715\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0720\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.deps.json
+E:\C#\DLL\Cmtest_lib_0720\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0720\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0720\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.AssemblyReference.cache
+E:\C#\DLL\Cmtest_lib_0720\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfoInputs.cache
+E:\C#\DLL\Cmtest_lib_0720\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfo.cs
+E:\C#\DLL\Cmtest_lib_0720\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.CoreCompileInputs.cache
+E:\C#\DLL\Cmtest_lib_0720\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0720\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0721\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.deps.json
+E:\C#\DLL\Cmtest_lib_0721\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0721\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0721\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfoInputs.cache
+E:\C#\DLL\Cmtest_lib_0721\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfo.cs
+E:\C#\DLL\Cmtest_lib_0721\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.CoreCompileInputs.cache
+E:\C#\DLL\Cmtest_lib_0721\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0721\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0722\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.deps.json
+E:\C#\DLL\Cmtest_lib_0722\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0722\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0722\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfoInputs.cache
+E:\C#\DLL\Cmtest_lib_0722\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfo.cs
+E:\C#\DLL\Cmtest_lib_0722\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.CoreCompileInputs.cache
+E:\C#\DLL\Cmtest_lib_0722\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0722\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0809 - 複製\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.deps.json
+E:\C#\DLL\Cmtest_lib_0809 - 複製\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0809 - 複製\Cmtest_lib\bin\Release\netcoreapp3.1\Cmtest_lib.pdb
+E:\C#\DLL\Cmtest_lib_0809 - 複製\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfoInputs.cache
+E:\C#\DLL\Cmtest_lib_0809 - 複製\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.AssemblyInfo.cs
+E:\C#\DLL\Cmtest_lib_0809 - 複製\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.csproj.CoreCompileInputs.cache
+E:\C#\DLL\Cmtest_lib_0809 - 複製\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.dll
+E:\C#\DLL\Cmtest_lib_0809 - 複製\Cmtest_lib\obj\Release\netcoreapp3.1\Cmtest_lib.pdb

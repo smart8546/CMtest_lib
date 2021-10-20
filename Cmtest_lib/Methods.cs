@@ -13,6 +13,7 @@ namespace Cmtest_lib
     {
         #region 宣告
         public  static BackgroundWorker bgwWorker = new BackgroundWorker();
+       
         #endregion
         #region UART Setting
         public static String UART_baud = "115200"; //鮑率
@@ -21,24 +22,21 @@ namespace Cmtest_lib
         public static string UART_stopbit=  "One"; //停止位元
         public static string UART_Parity = "None"; //同為檢查
         public static string UART_flow_control = "None"; //流量控制
-        public static SerialPort serialPort = new SerialPort();
+        public static SerialPort serialPort;
         public static Thread Serial_thread;
         #endregion
         public static void Test() 
         {
-            string str = "aaaa";
-            double aaaa = Convert.ToDouble(str);
-            if (aaaa%1 == 0)
+            if (serialPort.IsOpen)
             {
-                Console.WriteLine("{0}整數 ",str);
-            
+                string command = "123456";
+              //  byte[] buf = Encoding.Default.GetBytes(command + '\r'+ '\n');
+              //  serialPort.Write(buf, 0, buf.Length);
+
+                SendData(Encoding.ASCII.GetBytes(command + "\r" + "\n"));
+
+
             }
-            else 
-            {
-                Console.WriteLine("{0}小數",str);
-            }
-            //bool isNumeric = Regex.IsMatch(str, @"^([+-]?)/d*[.]?/d*$");
-            //Console.WriteLine(isNumeric);
         }
         #region Device 
         #region Backupgroud
@@ -49,14 +47,14 @@ namespace Cmtest_lib
 
             if (serialPort.IsOpen)
             {
-                Console.WriteLine("test1");
+               // Console.WriteLine("test1");
                 try
                 {
                     for (int j = 0; j < j + 2; j++)
                     {
                         Thread.Sleep(50);  //（毫秒）等待一定时间，确保数据的完整性 int len        
                         int len = serialPort.BytesToRead;
-                        Console.WriteLine(len.ToString());
+                     //   Console.WriteLine(len.ToString());
                         if (len != 0)
                         {
                             byte[] buff = new byte[len];
@@ -72,7 +70,10 @@ namespace Cmtest_lib
                 }
                 catch
                 {
+                  //  Console.WriteLine("456Test");
+                  //  bgwWorker.CancelAsync();
                     // ToolData.WriteLog(lrtxtLog, "接收数据出错", 1);
+
                     return;
                 }
 
@@ -93,7 +94,9 @@ namespace Cmtest_lib
             {
 
                 Console.WriteLine("Dis");
-             //   Serial_thread.Abort();
+                //   Serial_thread.Abort();
+                bgwWorker.WorkerSupportsCancellation = true;
+                bgwWorker.CancelAsync();
                 serialPort.Close();               
             }
         
@@ -102,22 +105,27 @@ namespace Cmtest_lib
         {
             try 
             {
+                serialPort = new SerialPort();
                 int Check = Device_name.IndexOf("COM");
                 if (Check == 0 && !serialPort.IsOpen) 
                 {
+                    UART_Comport = Device_name;
                     Console.WriteLine("connect");
                     //Com port name
-                    serialPort.PortName = Device_name;
+                    serialPort.PortName = UART_Comport;
+                    Console.WriteLine(UART_Comport);
                     //Setting BaudRate
                     int BaudRate = Convert.ToInt32(UART_baud);
                     serialPort.BaudRate = BaudRate;
+                    Console.WriteLine(BaudRate.ToString());
                     //Setting Databite
                     int DataRate = Convert.ToInt32(UART_Databite);
-                    serialPort.DataBits = DataRate;
+                    serialPort.DataBits = 8;
+                    Console.WriteLine(DataRate.ToString());
                     //Setting Parity
                     serialPort.Parity = (Parity)Enum.Parse(typeof(Parity), UART_Parity);
                     //Setting Stop bit
-                    serialPort.StopBits = (StopBits)Enum.Parse(typeof(StopBits), UART_stopbit);
+                    serialPort.StopBits = StopBits.One;//(StopBits)Enum.Parse(typeof(StopBits), UART_stopbit);
                     //Setting Flow control
                     serialPort.Handshake = (Handshake)Enum.Parse(typeof(Handshake), UART_flow_control);
                     // 讀取作業未完成時，發生逾時之前的毫秒數。
@@ -125,9 +133,13 @@ namespace Cmtest_lib
                     //發生逾時之前的毫秒數。
                     serialPort.WriteTimeout = 500;
                     serialPort.Open();
-                     serialPort.DataReceived += serialPort_DataReceived;
-                  //  Serial_thread = new Thread(SerialPort_Received);
-                  //  Serial_thread.Start();
+                    // Thread.Sleep(100);
+                    bgwWorker.WorkerSupportsCancellation = true;
+                    bgwWorker.DoWork += new DoWorkEventHandler(bgwWorker_DoWork);
+                    bgwWorker.RunWorkerAsync();
+                    //   serialPort.DataReceived += serialPort_DataReceived;
+                    //  Serial_thread = new Thread(SerialPort_Received);
+                    //  Serial_thread.Start();
 
 
                 }
@@ -208,7 +220,7 @@ namespace Cmtest_lib
             {
               
                 bool Check1 = Command.Contains("\r\n");
-                Console.WriteLine(Command);
+               // Console.WriteLine(Command);
                 if (Check1)
                 {
                     string[] Sub = Command.Split(new string[] { "\r\n" }, StringSplitOptions.None);
@@ -221,20 +233,54 @@ namespace Cmtest_lib
                             break;
                         }
                         string cmd = Sub[count];
-                        Console.WriteLine(cmd);
-                        serialPort.WriteLine(cmd + '\r' + '\n');
+                      //  Console.WriteLine(cmd);
+                        serialPort.Write(cmd + '\r' + '\n');
                         count++;
                     }
                 }
             }
         
         }
+
+        //關閉 Console
+        public static void CloseComport()
+        {
+            try
+            {
+                serialPort.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        //Console 發送資料
+        public static void SendData(Object sendBuffer)
+        {
+            if (sendBuffer != null)
+            {
+                Byte[] buffer = sendBuffer as Byte[];
+
+                try
+                {
+                    serialPort.Write(buffer, 0, buffer.Length);
+                   // serialPort.WriteLine('\r' + '\n');
+
+                }
+                catch (Exception ex)
+                {
+                    CloseComport();
+                    Console.WriteLine(ex.ToString());
+                }
+            }
+        }
+
         #endregion
         public static int Sum(int a, int b)
         {
             return a + b;
         }
-         public static int Product(int a, int b)
+        public static int Product(int a, int b)
         {
             return a * b;
         }
@@ -341,7 +387,18 @@ namespace Cmtest_lib
 
             //   return out_str;
         }
-
+        public static void Str_Contains(string input1,string input2) 
+        {
+            bool IsContains = input1.IndexOf(input2, StringComparison.OrdinalIgnoreCase) >= 0;//true
+            //  bool IsContains = input1.Contains(input2 );
+            Console.WriteLine(IsContains);
+        }
+        public static void Str_case_contains(string input1, string input2) 
+        {
+            //bool IsContains = input1.IndexOf(input2, StringComparison.OrdinalIgnoreCase) >= 0;//true
+            bool IsContains = input1.Contains(input2 );
+            Console.WriteLine(IsContains);
+        }
 
     }
 }

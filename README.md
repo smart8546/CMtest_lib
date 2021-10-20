@@ -16,9 +16,18 @@ The Project fun is:
 			
 	Fun5 UART_list:  
 		Print COM PORT list  
-	FUN6 Connect:
-		Input Connect device name
-
+	FUN6 Connect:  
+		Input Connect device name  
+	FUN7 Send:  
+		Input Connect device name  , Input send command , output receive  
+	FUN8 Disconnect:  
+		Input Disonnect device name  
+	FUN9 Str_Contains:  
+		Input1 and Inpit2 with String, Compare two string not Case,print compare result.  
+	FUN10 Str_case_contains:  
+		Input1 and Inpit2 with String, Compare two string  Case,print compare result.  
+		
+		
     Example1:
       $CurrentLocation = Get-Location
       $PSLib = "$CurrentLocation\Cmtest_lib.dll"
@@ -49,3 +58,23 @@ The Project fun is:
       $PSLib = "$CurrentLocation\Cmtest_lib.dll"
       [Reflection.Assembly]::LoadFile($PSLib) 
       [Cmtest_lib.Methods]::Connect("COM6")
+	Example7:
+      $CurrentLocation = Get-Location
+      $PSLib = "$CurrentLocation\Cmtest_lib.dll"
+      [Reflection.Assembly]::LoadFile($PSLib) 
+      [Cmtest_lib.Methods]::Send("COM6","123")
+	Example8:
+      $CurrentLocation = Get-Location
+      $PSLib = "$CurrentLocation\Cmtest_lib.dll"
+      [Reflection.Assembly]::LoadFile($PSLib) 
+      [Cmtest_lib.Methods]::Disconnect("COM6")
+	Example9:
+      $CurrentLocation = Get-Location
+      $PSLib = "$CurrentLocation\Cmtest_lib.dll"
+      [Reflection.Assembly]::LoadFile($PSLib) 
+      [Cmtest_lib.Methods]::Str_Contains("AAAbbb","aaa")
+	Example10:
+      $CurrentLocation = Get-Location
+      $PSLib = "$CurrentLocation\Cmtest_lib.dll"
+      [Reflection.Assembly]::LoadFile($PSLib) 
+      [Cmtest_lib.Methods]::Str_Contains("AAAbbb","aaa")

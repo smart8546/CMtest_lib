@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DCZmxH+uFt5IjEdPiWjxdi8iEFVBmVvlW5m9gYwJkacj83m7UkRZttqLMhJiYRoeJ7h7r2vw280nx2URXp75SA==",
+  "dgSpecHash": "49ULltd1WA40rC2Sy78u2za/dXFV5cGtk/Vm0+HmYq9k9c/HbYJ+lycatCu6DLuEl6xMbymXOR2vPicuTlhD4A==",
   "success": true,
-  "projectFilePath": "E:\\C#\\DLL\\Cmtest_lib_0714\\Cmtest_lib\\Cmtest_lib.csproj",
+  "projectFilePath": "E:\\C#\\DLL\\Cmtest_lib_0809 - 複製\\Cmtest_lib\\Cmtest_lib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smart\\.nuget\\packages\\hangfire\\1.7.24\\hangfire.1.7.24.nupkg.sha512",
     "C:\\Users\\smart\\.nuget\\packages\\hangfire.aspnetcore\\1.7.24\\hangfire.aspnetcore.1.7.24.nupkg.sha512",
